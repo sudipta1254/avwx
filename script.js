@@ -155,7 +155,7 @@ async function search() {
          sp.appendChild(span);
       }
       d2.appendChild(sp);
-      d2.innerHTML += `Website: <a href='${data[i].website}'>Visit</a><br><br>`;
+      d2.innerHTML += `Website: <a href='${data[i].wiki}'>Visit</a><br><br>`;
    }
 }
 async function nearest() {
