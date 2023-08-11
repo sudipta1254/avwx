@@ -105,6 +105,7 @@ async function main() {
       d2.innerHTML += 'Raw: '+data.raw;
    } else if(type == 'station') {
       d2.innerHTML = `Name: ${data.name}, ${data.city}, ${data.state}, ${data.country} <img src="https://flagcdn.com/24x18/${data.country.toLowerCase()}.png"> <br>
+                     Coordinate: ${data.latitude.toFixed(2)}, ${data.longitude.toFixed(2)} <br>
                      IATA: ${data.iata} <br>
                      ICAO: ${data.icao} <br>
                      Reporting: ${data.reporting?'Yes':'No'} <br>`;
@@ -136,6 +137,7 @@ async function search() {
    for(i = 0; i < data.length; i++) {
       var sp = document.createElement('span');
       sp.innerHTML = (i+1)+`. Name: ${data[i].name}, ${data[i].city}, ${data[i].state}, ${data[i].country} <img src="https://flagcdn.com/24x18/${data[i].country.toLowerCase()}.png"> <br>
+                     Coordinate: ${data[i].latitude.toFixed(2)}, ${data[i].longitude.toFixed(2)} <br>
                      IATA: ${data[i].iata} <br>
                      ICAO: ${data[i].icao} <br>
                      Reporting: ${data[i].reporting?'Yes':'No'} <br>`;
