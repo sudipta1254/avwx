@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Weather, Forecast, Service, Climate, Data, Rain, Raining, Snow">
+    <meta name="description" content="Get weather data, current weather and forecast for your location.">
+    <!-- <script src="https://kit.fontawesome.com/a26a0964b9.js" crossorigin="anonymous"></script> -->
+    <script src="https://kit.fontawesome.com/0c5b018ce0.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <title>AVWX Service</title>
+</head>
+<body>
+    <div class="header">
+        <p>AVWX API
+           <span class="fa-solid fa-certificate fa-1x spin" style="color: #0095ff"></span>
+        </p>
+        <span class="fa-solid fa-info fa-1x" onclick='info()'></span>
+    </div>
+    <div class="d1">
+    <div class="d11">
+        <input type="text" id='t1' placeholder='Enter query'>
+        <button onclick='get()'>Search</button>
+    </div>
+    <div class="d12">
+        <label for="metar">METAR</label>
+        <input type="radio" id='metar' name='same' checked='true'>
+        <label for="taf">TAF</label>
+        <input type="radio" id='taf' name='same'>
+        <label for="station">INFO</label>
+        <input type="radio" id='station' name='same'>
+        <label for="search">SEARCH</label>
+        <input type="radio" id='search' name='same'>
+        <label for="near">NEAREST</label>
+        <input type="radio" id='near' name='same'>
+    </div>
+    </div>
+    <div class="d2"><p>.....</p></div>
+    <footer>
+    Page designed by <a href='//sudipta1254.github.io/linkline'>Sudipto</a> <br>
+    Data provided by
+    <a href='//avwx.rest'>AVWX</a>
+    </footer>
+    <script src="script.js"></script>
+<body>
+</html>
