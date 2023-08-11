@@ -1,0 +1,94 @@
+body {
+   color: white;
+   background: #212121;
+}
+p {
+   text-align: center;
+   text-decoration: underline;
+}
+.header {
+/*    display: flex; */
+}
+.d11, .d12 {
+/*    border: 1px solid red; */
+}
+.d2 {
+   width: 96%;
+   line-height: 2.2;
+   margin: 25px auto 0;
+   //border: 1px solid red;
+}
+label {
+   margin: 0px 0 0px 42px;
+}
+input {
+   margin: 10px 5px;
+}
+#t1 {
+   color: White;
+   background: Black;
+   width: 180px;
+   height: 35px;
+   text-align: center;
+   border-radius: 14px;
+   margin: 15px 40px;
+}
+#fl {
+   display: inline-block;
+   width: 12px;
+   height: 12px;
+   margin: 0 5px;
+   border-radius: 50%;
+}
+button {
+   width: 70px;
+   height: 35px;
+   letter-spacing: 1.5px;
+   border-radius: 5px;
+}
+ul, li {
+   margin: 0;
+}
+a {
+   color: white;
+}
+a:hover {
+   color: Tomato;
+   transition: .4s;
+   letter-spacing: 1px;
+}
+footer {
+   line-height: 1.7;
+   margin: 35px auto 10px;
+   text-align: center;
+/*    border: 1px solid red; */
+}
+ol {
+   margin: 0;
+   padding: 0 0 0 20px;
+}
+ul {
+   margin: 0;
+}
+
+@media only screen and (min-width: 560px) {
+    .d11, .d12 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+   .d2 {
+      width: 600px;
+   }
+   label {
+      margin: 0px 0 0px 20px;
+   }
+}
+
+.spin {
+   margin-left: 5px;
+   animation: spin 6s linear infinite;
+}
+@keyframes spin {
+   to { transform: rotate(360deg); }
+}
