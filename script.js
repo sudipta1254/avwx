@@ -121,7 +121,7 @@ async function main() {
          span.appendChild(ul);
          d2.appendChild(span);
       }
-      d2.innerHTML += `Website: <a href='${data.website}'>Visit</a>`;
+      d2.innerHTML += `Website: <a href='${data.wiki}'>Visit</a>`;
    }
 }
 async function search() {
