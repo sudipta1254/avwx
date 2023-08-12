@@ -166,7 +166,31 @@ async function nearest() {
       alert('Error: '+res.status);
    const data = await res.json();
    
-   console.log(data)
+   d2.innerHTML = '';
+   for(i = 0; i < data.length; i++) {
+      var stat = data[i].station;
+      var sp = document.createElement('span');
+      sp.innerHTML = (i+1)+`. Name: ${stat.name}, ${stat.city}, ${stat.state}, ${stat.country} <img src="https://flagcdn.com/24x18/${stat.country.toLowerCase()}.png"> <br>
+      Coordinate: ${stat.latitude.toFixed(2)}, ${stat.longitude.toFixed(2)} <br>
+                     IATA: ${stat.iata} <br>
+                     ICAO: ${stat.icao} <br>
+                     Reporting: ${stat.reporting?'Yes':'No'} <br>`;
+      for(j = 0; j < stat.runways.length; j++) {
+         var rny = stat.runways[j];
+         var span = document.createElement('span');
+         var ul = document.createElement('ul');
+         span.innerHTML = 'Runway '+(j+1)+':-';
+         ul.innerHTML = `<li>Surface: ${rny.surface}</li>
+                        <li>Numbers: ${rny.ident1} & ${rny.ident2}</li>
+                        <li>Length: ${rny.length_ft} ft</li>
+                        <li>Width: ${rny.width_ft} ft</li>
+                        <li>Lights: ${rny.lights} </li>`;
+         span.appendChild(ul);
+         sp.appendChild(span);
+      }
+      d2.appendChild(sp);
+      d2.innerHTML += `Website: <a href='${stat.wiki}'>Visit</a><br>`;
+   }
 }
 
 function get() {
