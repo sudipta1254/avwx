@@ -23,6 +23,7 @@ label {
 }
 input {
    margin: 10px 5px;
+   accent-color: #F55050;
 }
 #t1 {
    color: White;
